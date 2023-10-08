@@ -1,8 +1,8 @@
-name: Build demo
+name: studydev
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
           cd demo
           deno task build --location=https://lumeland.github.io/theme-simple-blog
 
-      - name: Deploy
+      - name: studydev
         uses: crazy-max/ghaction-github-pages@v2.0.1
         with:
           build_dir: demo/_site
