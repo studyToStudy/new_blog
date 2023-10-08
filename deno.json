@@ -6,21 +6,16 @@
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s",
-    "changelog": "deno run --allow-read --allow-write https://deno.land/x/changelog@v2.1.0/bin.ts"
+    "changelog": "deno run --allow-read --allow-write https://deno.land/x/changelog@v2.1.0/bin.ts",
+    "deploy": "deno task build && rsync -r _site/ user@my-site.com:~/www"
   },
   "lint": {
-    "exclude": [
-      "./_site"
-    ],
+    "exclude": ["./_site"],
     "rules": {
-      "tags": [
-        "recommended"
-      ]
+      "tags": ["recommended"]
     }
   },
   "fmt": {
-    "exclude": [
-      "./_site"
-    ]
+    "exclude": ["./_site"]
   }
 }
