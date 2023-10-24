@@ -27,13 +27,13 @@ export interface Options {
   pagefind?: Partial<PagefindOptions>;
 }
 
-site.use(
-  code_highlight({
-    languages: {
-      rust: lang_rust,
-    },
-  })
-);
+// site.use(
+//   code_highlight({
+//     languages: {
+//       rust: lang_rust,
+//     },
+//   })
+// );
 
 /** Configure the site */
 export default function (options: Options = {}) {
