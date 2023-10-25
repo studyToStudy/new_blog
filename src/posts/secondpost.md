@@ -38,7 +38,7 @@ cargo add clap --features derive
 
 dervie 기능을 사용하기 위해 위와 같은 명령어를 터미널에 입력합니다. 
 derive 기능은 struct에서 일부 구문 분석 코드를 자동으로 생성하는 매크로를 추가하는데요.
-**#[derive(Parser)]**와 같이 struct 위에 주석을 달 수 있습니다.
+#[derive(Parser)]와 같이 struct 위에 주석을 달 수 있습니다.
 
 
 ```rust
@@ -46,8 +46,9 @@ derive 기능은 struct에서 일부 구문 분석 코드를 자동으로 생성
 [dependencies]
 clap = { version = "4.4.6", features = ["derive"] }
 ```
-설치가 잘 되었다면 Cargo.toml 파일의 dependencies 항목에 위와같이 들어가 있게 됩니다.
+설치가 잘 되었다면 Cargo.toml 파일의 dependencies 항목에 위와같이git  들어가 있게 됩니다.
 
+## 구조체 생성 및 함수 작성
 main.rs로 돌아가 사용해봅시다.
 
 ```rust
@@ -86,6 +87,7 @@ Options:
 출력된 메시지에서 볼 수 있듯이 인수 섹션 아래에 <MESSAGE>라는 위치 인수가 있습니다. 
 메시지 인수를 전달하지 않으면, clap은 에러 메시지를 반환합니다.
 
+## 커스텀 에러메시지 사용하기
 하지만 지금 정의된 구조체만 가지고는 사용자가 어떤 인자를 전달해야 하는지 모르고 그 기능또한 사용하기 어렵갰죠?
 
 struct를 다음과 같이 변경해 줍시다.
